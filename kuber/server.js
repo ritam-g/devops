@@ -1,5 +1,7 @@
 import express from 'express'
+import morgan from "morgan";
 const app = express()
+app.use(morgan('dev'))
 const PORT = 3000
 
 app.get('/', (req, res) => {
